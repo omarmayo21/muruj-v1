@@ -1,0 +1,146 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-16T16:25:00.000Z",
+  "title": "Design System: Muruj Compound Smouha (كمبوند مروج سموحة)",
+  "extensions": {
+    "colorMeta": {
+      "cypress-primary": {
+        "role": "primary",
+        "displayName": "Cypress Forest",
+        "canonical": "#0D3B2E",
+        "tonalRamp": ["#08241C", "#0D3B2E", "#144B3B", "#1D5E4A", "#2E7D65", "#62A891", "#A8D1C3", "#EEF5F2"]
+      },
+      "bronze-accent": {
+        "role": "secondary",
+        "displayName": "Burnished Architectural Bronze",
+        "canonical": "#B8864B",
+        "tonalRamp": ["#4A3114", "#6E4B22", "#8C6230", "#A4743D", "#B8864B", "#CCA068", "#DEC094", "#F5EBD9"]
+      },
+      "limestone-bg": {
+        "role": "neutral",
+        "displayName": "Alexandrian Limestone",
+        "canonical": "#F6F3EC",
+        "tonalRamp": ["#13221D", "#263B34", "#475E56", "#8A8274", "#C2B9A7", "#D8D0C1", "#EBE5D8", "#F6F3EC"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero and page-level H1 titles in Arabic and English." },
+      "headline": { "displayName": "Headline", "purpose": "Section H2 headings." },
+      "title": { "displayName": "Title", "purpose": "Unit card headings and floor-plan titles." },
+      "body": { "displayName": "Body", "purpose": "Project narrative, FAQ answers, and unit descriptions." },
+      "label": { "displayName": "Label", "purpose": "Architectural ledger keys, badges, and table headers." }
+    },
+    "shadows": [
+      {
+        "name": "atelier",
+        "value": "0 14px 34px -10px rgba(13, 59, 46, 0.10), 0 4px 12px -4px rgba(19, 34, 29, 0.06)",
+        "purpose": "Soft ambient depth for architectural unit showcases and floor plan frames."
+      },
+      {
+        "name": "desk",
+        "value": "0 24px 52px -14px rgba(8, 36, 28, 0.24), 0 8px 20px -6px rgba(19, 34, 29, 0.12)",
+        "purpose": "Elevated shadow for the Cypress Lead Registration Desk."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out-quart",
+        "value": "cubic-bezier(0.25, 1, 0.5, 1)",
+        "purpose": "Smooth gallery image transitions and interactive hover states."
+      }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "xl", "value": "1280px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Cypress Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Primary CTA button on light limestone/travertine surfaces.",
+      "html": "<button class=\"ds-btn-primary\" dir=\"rtl\">احجز وحدتك / اطلب قائمة الأسعار</button>",
+      "css": ".ds-btn-primary { font-family: 'Cairo', sans-serif; background: #0D3B2E; color: #F6F3EC; padding: 14px 24px; border-radius: 8px; font-weight: 700; font-size: 15px; border: 1px solid #0D3B2E; cursor: pointer; transition: background 0.2s ease; } .ds-btn-primary:hover { background: #144B3B; } .ds-btn-primary:focus-visible { outline: 2px solid #B8864B; outline-offset: 2px; }"
+    },
+    {
+      "name": "Bronze Conversion Submit Button",
+      "kind": "button",
+      "refersTo": "button-bronze",
+      "description": "High-salience lead form submit button inside dark cypress containers.",
+      "html": "<button class=\"ds-btn-bronze\" dir=\"rtl\">احجز الآن / سجل اهتمامك</button>",
+      "css": ".ds-btn-bronze { font-family: 'Cairo', sans-serif; background: #B8864B; color: #08241C; padding: 16px 32px; border-radius: 8px; font-weight: 800; font-size: 16px; border: none; cursor: pointer; transition: background 0.2s ease; } .ds-btn-bronze:hover { background: #CCA068; } .ds-btn-bronze:focus-visible { outline: 2px solid #DEC094; outline-offset: 2px; }"
+    },
+    {
+      "name": "Lead Desk Input Field",
+      "kind": "input",
+      "refersTo": "input-lead",
+      "description": "Dark obsidian-cypress input field with burnished bronze focus ring.",
+      "html": "<input class=\"ds-input\" dir=\"rtl\" placeholder=\"مثال: أحمد محمد على\" />",
+      "css": ".ds-input { font-family: 'Cairo', sans-serif; background: #08241C; color: #F6F3EC; padding: 12px 16px; border-radius: 8px; border: 1px solid rgba(246,243,236,0.25); font-size: 16px; width: 260px; } .ds-input::placeholder { color: rgba(246,243,236,0.45); } .ds-input:focus { outline: none; border-color: #CCA068; box-shadow: 0 0 0 2px rgba(204,160,104,0.35); }"
+    },
+    {
+      "name": "Architectural Fact Ledger Cell",
+      "kind": "card",
+      "refersTo": "card-atelier",
+      "description": "1px hairline-bordered specification cell for verified compound facts.",
+      "html": "<div class=\"ds-ledger-cell\" dir=\"rtl\"><div class=\"ds-ledger-label\">المساحة الإجمالية</div><div class=\"ds-ledger-val\">182 فدان متكامل</div><div class=\"ds-ledger-sub\">نادي رياضي على مساحة 14 فدان</div></div>",
+      "css": ".ds-ledger-cell { font-family: 'Cairo', sans-serif; background: #EBE5D8; border: 1px solid #D8D0C1; border-radius: 8px; padding: 16px; color: #13221D; } .ds-ledger-label { font-size: 12px; font-weight: 600; color: #475E56; } .ds-ledger-val { font-size: 16px; font-weight: 800; color: #0D3B2E; margin-top: 4px; font-variant-numeric: tabular-nums; } .ds-ledger-sub { font-size: 11px; color: #475E56; margin-top: 2px; }"
+    },
+    {
+      "name": "Unit Showcase Card",
+      "kind": "card",
+      "refersTo": "card-atelier",
+      "description": "Residential unit card with tabular area/room metrics and direct inquiry CTA.",
+      "html": "<div class=\"ds-unit-card\" dir=\"rtl\"><div class=\"ds-unit-title\">شقة 150 م² — إطلالة مفتوحة</div><div class=\"ds-unit-meta\">3 غرف · 3 حمام · كامل التشطيب</div></div>",
+      "css": ".ds-unit-card { font-family: 'Cairo', sans-serif; background: #F6F3EC; border: 1px solid #D8D0C1; border-radius: 12px; padding: 20px; box-shadow: 0 14px 34px -10px rgba(13, 59, 46, 0.10); } .ds-unit-title { font-size: 16px; font-weight: 800; color: #13221D; } .ds-unit-meta { font-size: 12px; font-weight: 600; color: #475E56; margin-top: 6px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Mediterranean Limestone & Cypress Architectural Atelier",
+    "overview": "The visual system treats Muruj Compound Smouha's 182-feddan master-planned urban community as an authoritative Alexandrian architectural monograph and private sales pavilion. Rather than relying on generic real-estate portal card-clutter, the interface combines sun-warmed Alexandrian limestone (#F6F3EC) and travertine (#EBE5D8) surfaces with deep Mediterranean cypress forest (#0D3B2E) structural anchors and burnished bronze (#B8864B) accents derived directly from the official AlForat Development identity.",
+    "keyCharacteristics": [
+      "Warm Alexandrian limestone and travertine stone surfaces paired with deep cypress forest conversion desks.",
+      "Crisp 1px architectural drafting hairlines (#D8D0C1) organizing key project metrics into scannable ledgers.",
+      "Bilingual Cairo typography with tabular-nums for unit areas (m²), down-payment percentages, and E.164 phone numbers.",
+      "Self-contained vector country flags and Lucide stroke-consistent (1.75px) architectural iconography."
+    ],
+    "rules": [
+      {
+        "name": "The Tinted-Ink Rule",
+        "body": "Secondary and muted text on warm stone or dark cypress surfaces is always tinted from the pine/champagne hue family (#263B34, #475E56, #DEC094), never neutral gray.",
+        "section": "colors"
+      },
+      {
+        "name": "The Conversion Desk Contrast Rule",
+        "body": "While content sections rest on calm limestone and travertine grounds, the Lead Registration Form owns a dedicated deep cypress (#0D3B2E) pavilion with a burnished bronze (#B8864B) submit button so the primary conversion action is unmistakable.",
+        "section": "colors"
+      },
+      {
+        "name": "The No-Kicker Rule",
+        "body": "Headings (<h1>–<h3>) never carry an eyebrow or kicker label above them; the heading itself leads the section with generous top spacing.",
+        "section": "typography"
+      },
+      {
+        "name": "The Tabular Measurement Rule",
+        "body": "Every area (106 م²–479 م²), percentage (10%, 15%, 20%), distance (3.2 كم), and phone number uses font-variant-numeric: tabular-nums.",
+        "section": "typography"
+      }
+    ],
+    "dos": [
+      "Do keep the Hero section first and the Lead Form immediately second on the Home page.",
+      "Do validate phone numbers per country via libphonenumber-js and format them in full E.164 format (+20...).",
+      "Do set explicit width and height attributes on every <img> element to maintain zero Cumulative Layout Shift (CLS).",
+      "Do use only verified unit areas (106 م²–479 م²), villa types (V1–V4), landmarks, and payment plans from the 4 official sources."
+    ],
+    "donts": [
+      "Don't place kicker or eyebrow labels above headings (<h1>, <h2>, <h3>).",
+      "Don't invent unit prices, areas, or delivery dates not present in the sources.",
+      "Don't expose third-party broker logos, phone numbers, or external hotlinked images.",
+      "Don't fire the Google Ads conversion event on /thank-you unless sessionStorage confirms a real form submission on that visit."
+    ]
+  }
+}
+
